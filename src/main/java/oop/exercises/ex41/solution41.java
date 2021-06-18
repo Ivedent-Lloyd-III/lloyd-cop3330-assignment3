@@ -2,7 +2,7 @@ package oop.exercises.ex41;
 
 /*
  *  UCF COP3330 Summer 2021 Assignment 3 Solution 41
- *  Copyright 2021 first_name last_name
+ *  Copyright 2021 Ivedent Lloyd III
  */
 
 import java.io.*;
