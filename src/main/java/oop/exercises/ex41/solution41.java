@@ -5,30 +5,48 @@ package oop.exercises.ex41;
  *  Copyright 2021 first_name last_name
  */
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class solution41 {
-    private static final Scanner in = new Scanner(System.in);
+
+    private static int count = 0;
 
     public static void main(String[] args) throws FileNotFoundException {
         // read the file
         // create a Arraylist for the names
+        // count the names with a counter
         // sort the names
         // print the names
 
-        readFileInput();
-
+       List<String> namesList = listNames();
+       sortNames(namesList);
     }
 
-    private static void readFileInput() throws FileNotFoundException {
-        Scanner fileReader = new Scanner(new File("exercise41_input.txt"));
+    private static List<String> listNames() throws FileNotFoundException {
+        File names = new File("C:\\Users\\ivede\\Desktop\\OOP Exercises\\exercise41_input.txt");
+        Scanner sc = new Scanner(names);
 
+        List<String> namesList = new ArrayList<>();
+
+        while(sc.hasNextLine()) {
+            namesList.add(sc.nextLine());
+            count = count + 1;
+        }
+        sc.close();
+        return namesList;
     }
 
+    private static void sortNames(List<String> namesList) throws FileNotFoundException {
+        namesList.sort(String::compareToIgnoreCase);
+        PrintWriter fileWriter = new PrintWriter("C:\\Users\\ivede\\Desktop\\OOP Exercises\\exercise41_output.txt");
+
+        fileWriter.println("Total of "+count+" names");
+        fileWriter.println("_________________________");
+
+        for(Object o : namesList)
+            fileWriter.println(o);
+
+        fileWriter.close();
+    }
 }
