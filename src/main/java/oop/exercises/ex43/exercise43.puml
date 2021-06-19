@@ -1,7 +1,6 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-class solution41
 abstract class AbstractList
 abstract AbstractCollection
 interface List
@@ -14,8 +13,15 @@ Collection <|- List
 AbstractCollection <|- AbstractList
 AbstractList <|-- ArrayList
 
-class solution41 {
-
-
+class ArrayList {
+Object[] elementData
+size()
 }
+
+enum TimeUnit {
+DAYS
+HOURS
+MINUTES
+}
+
 @enduml

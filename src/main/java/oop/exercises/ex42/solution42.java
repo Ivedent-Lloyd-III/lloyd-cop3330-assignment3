@@ -6,4 +6,11 @@ package oop.exercises.ex42;
  */
 
 public class solution42 {
+
+
+    public static void main(String[] args){
+
+
+    }
+
 }
