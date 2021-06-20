@@ -19,28 +19,28 @@ public class solution46 {
 
     private static void fileReader() throws IOException {
         String inputString;
-
         int count;
+
         File file = new File("C:\\Users\\ivede\\Desktop\\OOP Exercises\\exercise46_input.txt");
         Scanner sc = new Scanner(file);
-        HashMap<String, Integer> map = new HashMap<>();
+        HashMap<String, Integer> InputMap = new HashMap<>();
 
         while (sc.hasNextLine()){
             inputString = sc.nextLine();
-            String[] wordsArray = inputString.split("\\s+");
+            String[] wordArray = inputString.split("\\s+");
 
-            for (String word : wordsArray) {
-                if (map.containsKey(word)) {
-                    count = map.get(word);
-                    map.put(word, count + 1);
+            for (String wordReader : wordArray) {
+                if (InputMap.containsKey(wordReader)) {
+                    count = InputMap.get(wordReader);
+                    InputMap.put(wordReader, count + 1);
                 } else {
-                    map.put(word, 1);
+                    InputMap.put(wordReader, 1);
                 }
             }
         }
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            System.out.print(entry.getKey() + " : ");
-            for(int i = 0; i < entry.getValue(); i++){
+        for (Map.Entry<String, Integer> word : InputMap.entrySet()) {
+            System.out.print(word.getKey() + " : ");
+            for(int i = 0; i < word.getValue(); i++){
                 System.out.print("*");
             }
             System.out.print("\n");

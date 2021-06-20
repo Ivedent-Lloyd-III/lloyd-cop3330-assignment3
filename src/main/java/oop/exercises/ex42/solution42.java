@@ -13,11 +13,8 @@ import java.util.TreeMap;
 
 public class solution42 {
 
-
     public static void main(String[] args) throws FileNotFoundException {
-
         fileReader();
-
     }
 
     private static void fileReader() throws FileNotFoundException {
@@ -36,5 +33,4 @@ public class solution42 {
         }
         System.out.println(map);
     }
-
 }

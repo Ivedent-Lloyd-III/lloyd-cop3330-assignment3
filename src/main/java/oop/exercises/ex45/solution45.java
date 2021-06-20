@@ -30,7 +30,6 @@ public class solution45 {
         } finally {
             sc.close();
         }
-        System.out.println("\n Successfully modified!!");
         writer.close();
     }
 }
