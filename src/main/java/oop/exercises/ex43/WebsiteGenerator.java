@@ -19,7 +19,7 @@ public class WebsiteGenerator {
             System.out.println("Created "+currentPath);
             try{
                 FileWriter newfileWriter = new FileWriter(new File(currentPath+"\\index.html"));
-                newfileWriter.write("<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n");
+                newfileWriter.write("<!DOCTYPE html PUBLIC>\n<html lang=\"en\">\n<head>\n");
                 newfileWriter.write("\t<meta author=\""+authorName+"\">\n");
                 newfileWriter.write("\t<title>"+siteName+"</title\n");
                 newfileWriter.write("</head>\n<body>\n\n<body>\n</html>");
