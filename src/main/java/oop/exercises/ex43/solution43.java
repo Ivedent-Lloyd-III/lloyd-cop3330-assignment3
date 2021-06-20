@@ -15,6 +15,7 @@ public class solution43 {
     private static String authorName;
     private static String javaScriptFiles;
     private static String ccsFiles;
+    private static String currentPath;
 
     public static void main(String[] args) throws IOException {
 
@@ -25,8 +26,11 @@ public class solution43 {
         nameStringInputs();
         filesGenerator();
 
+        currentPath = System.getProperty("user.dir");
+        currentPath += "\\"+siteName;
+
         WebsiteGenerator wg = new WebsiteGenerator();
-        wg.generateWebsiteOutput(siteName, authorName, javaScriptFiles, ccsFiles);
+        wg.generateWebsiteOutput(currentPath, siteName, authorName, javaScriptFiles, ccsFiles);
 
         // use a function to initialize class variables
         // use a new class to output;
@@ -40,30 +44,23 @@ public class solution43 {
     }
 
     private static void filesGenerator() {
-        System.out.print("Do you want to make a folder for JavaScript?");
+        System.out.print("Do you want to make a folder for JavaScript? ");
         String javascriptInput = in.nextLine();
 
-        switch (javascriptInput) {
-            case "Y":
-                javaScriptFiles = "jv";
-            case "y":
-                javaScriptFiles = "jv";
-            case "N":
-                javaScriptFiles = null;
-            case "n":
-                javaScriptFiles = null;
+        if(javascriptInput.equals("Y") || javascriptInput.equals("y")){
+            javaScriptFiles = "jv";
         }
-        System.out.print("Do you want to make a folder for CSS");
+        else{
+            javaScriptFiles = null;
+        }
+        System.out.print("Do you want to make a folder for CSS? ");
         String cssInput = in.nextLine();
-        switch (cssInput) {
-            case "Y":
-                ccsFiles = "ccs";
-            case "y":
-                ccsFiles = "ccs";
-            case "N":
-                ccsFiles = null;
-            case "n":
-                ccsFiles = null;
+
+        if(cssInput.equals("Y") || cssInput.equals("y")){
+            ccsFiles = "ccs";
+        }
+        else{
+            ccsFiles = null;
         }
     }
 }
