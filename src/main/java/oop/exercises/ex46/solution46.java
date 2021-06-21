@@ -14,6 +14,12 @@ import java.util.Scanner;
 public class solution46 {
 
     public static void main(String[] args) throws IOException {
+
+        // input a file and read
+        // initialize a scanner and an map
+        // count each word and keep track with a counter
+        // output with solution
+
         fileReader();
     }
 
@@ -21,14 +27,19 @@ public class solution46 {
         String inputString;
         int count;
 
+        // initialize the file reader and scanner
         File file = new File("C:\\Users\\ivede\\Desktop\\OOP Exercises\\exercise46_input.txt");
         Scanner sc = new Scanner(file);
+        // initialize the HashMap
         HashMap<String, Integer> InputMap = new HashMap<>();
 
+        // use the while statement to scan the file
         while (sc.hasNextLine()){
             inputString = sc.nextLine();
+            // add the strings to an
             String[] wordArray = inputString.split("\\s+");
 
+            // use nested loop to count word frequency
             for (String wordReader : wordArray) {
                 if (InputMap.containsKey(wordReader)) {
                     count = InputMap.get(wordReader);
@@ -38,6 +49,7 @@ public class solution46 {
                 }
             }
         }
+        // use a loop to output from the
         for (Map.Entry<String, Integer> word : InputMap.entrySet()) {
             System.out.print(word.getKey() + " : ");
             for(int i = 0; i < word.getValue(); i++){

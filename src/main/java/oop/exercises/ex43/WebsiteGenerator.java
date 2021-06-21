@@ -12,10 +12,16 @@ import java.io.IOException;
 public class WebsiteGenerator {
 
     public static void generateWebsiteOutput(String currentPath, String javaScriptFiles, String ccsFiles, String siteName, String authorName) throws IOException {
+        // create a file
+        // create html template
+        // using variable from other class create output statements
+
         File newWebsite = new File(currentPath);
         boolean createdWebsite = newWebsite.mkdir();
 
         if(createdWebsite){
+
+            // use the writer to format the html
             System.out.println("Created "+currentPath);
             try{
                 FileWriter newfileWriter = new FileWriter(new File(currentPath+"\\index.html"));
@@ -25,8 +31,10 @@ public class WebsiteGenerator {
                 newfileWriter.write("</head>\n<body>\n\n<body>\n</html>");
                 newfileWriter.close();
 
+                // update the output path
                 System.out.println("Created "+currentPath+"\\index.html");
 
+                // use the loop to add files
                 if(javaScriptFiles != null){
                     File js = new File(currentPath+"\\js");
                     boolean createdfolderJS = js.mkdir();
@@ -38,6 +46,7 @@ public class WebsiteGenerator {
                         System.out.println("No JS file was created.");
                     }
                 }
+                // use the loop to add files
                 if(ccsFiles != null){
                     File ccs = new File(currentPath+"\\ccs");
                     boolean createdfolderCCS = ccs.mkdir();
@@ -55,7 +64,7 @@ public class WebsiteGenerator {
             }
         }
         else{
-            System.out.println("website folder not created");
+            System.out.println("website folder was not created");
         }
     }
 }

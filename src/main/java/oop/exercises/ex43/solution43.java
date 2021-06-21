@@ -22,13 +22,18 @@ public class solution43 {
         // use a function twice to prompt for two strings
         // the first call returns a string value for "site name"
         // the second call returns a string value for "author"
+        // use another function to assign class variables
+        // create a class to output the website
 
+        // series of function calls for user String inputs
         nameStringInputs();
         filesGenerator();
 
+        // get directory
         currentPath = System.getProperty("user.dir");
         currentPath += "\\"+siteName;
 
+        // call for generator class to generate the html
         WebsiteGenerator wg = new WebsiteGenerator();
         wg.generateWebsiteOutput(currentPath, siteName, authorName, javaScriptFiles, ccsFiles);
 
@@ -37,6 +42,7 @@ public class solution43 {
     }
 
     private static void nameStringInputs() {
+        // class variable initialization
         System.out.print("Site Name: ");
         siteName = in.nextLine();
         System.out.print("Author: ");
@@ -44,6 +50,8 @@ public class solution43 {
     }
 
     private static void filesGenerator() {
+
+        // initialize class variables for the folders
         System.out.print("Do you want to make a folder for JavaScript? ");
         String javascriptInput = in.nextLine();
 

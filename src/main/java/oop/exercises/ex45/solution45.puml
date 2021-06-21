@@ -1,27 +1,16 @@
 @startuml
-'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+class solution45
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+class solution45 {
++file; File
++writer; FileWriter;
++user; String
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
 
-class ArrayList {
-Object[] elementData
-size()
-}
++main(); void
+-readFile(); void
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
 }
 
 @enduml

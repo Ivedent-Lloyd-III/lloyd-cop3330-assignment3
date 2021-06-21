@@ -15,6 +15,10 @@ public class solution44 {
 
     public static void main(String[] args){
 
+        // ask the user what product they want to see
+        // read the file
+        // parse the file looking for the user input
+        // print the data from the file
 
         JSONreader();
 

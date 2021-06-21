@@ -1,0 +1,17 @@
+@startuml
+
+class solution46
+
+class solution46 {
++inputFile; File
++fileWriter; FileWriter;
++inputString; String
++count; int
+InputMap; HashMap
+
++main(); void
+-fileReader(); void
+
+}
+
+@enduml

@@ -1,12 +1,14 @@
 @startuml
 
+solution43->WebsiteGenerator
+
 class solution43
 
 class solution43 {
 -siteName; String
--authorName;String
--javaScriptFiles;String
--ccsFiles;String
+-authorName; String
+-javaScriptFiles; String
+-ccsFiles; String
 -currentPath; String
 
 +main(); void
@@ -15,7 +17,7 @@ class solution43 {
 
 }
 
-class websiteGenerator{
+class WebsiteGenerator{
 +newWebsite; File
 
 +generateWebsiteOutput(); void
