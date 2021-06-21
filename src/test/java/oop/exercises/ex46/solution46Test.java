@@ -14,9 +14,9 @@ public class solution46Test extends TestCase {
         File readerTest = new File("C:\\Users\\ivede\\Desktop\\OOP Exercises\\exercise46_input.txt");
         Scanner inputTestSC = new Scanner(readerTest);
 
-        int countBadger = 0;
-        int countMushroom = 0;
-        int countSnake = 0;
+        int countBadger = 1;
+        int countMushroom = 1;
+        int countSnake = 1;
 
         while (inputTestSC.hasNextLine()) {
             String input = inputTestSC.nextLine();

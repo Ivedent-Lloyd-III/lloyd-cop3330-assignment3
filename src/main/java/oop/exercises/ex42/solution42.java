@@ -24,22 +24,15 @@ public class solution42 {
     }
 
     private static void fileReader() throws FileNotFoundException {
-
         // read the file
         File inputFile = new File("C:\\Users\\ivede\\Desktop\\OOP Exercises\\exercise42_input.txt");
+        Scanner scan = new Scanner(inputFile);
 
-        // format the output
-        String text = null;
-        System.out.println("----------");
+        // scan in the string
+        while(scan.hasNextLine()) {
+            String input = scan.nextLine();
+            String [] output = input.split(",");
 
-        SortedMap<String,Integer> map = new TreeMap<String,Integer>();
-        Scanner sc = new Scanner(inputFile).useDelimiter("[\",]+");
-        while (sc.hasNextLine()) {
-            if (sc.hasNext("[a-z]+")) {
-                map.put(sc.next(), sc.nextInt());
-            }
-            sc.nextLine();
         }
-        System.out.println(map);
     }
 }
