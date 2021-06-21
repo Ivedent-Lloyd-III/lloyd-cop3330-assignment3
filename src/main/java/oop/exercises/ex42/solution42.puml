@@ -1,0 +1,16 @@
+@startuml
+
+class solution42
+
+class solution42 {
+
++inputArray; ArrayList
++inputFile; File
++sortedList; ArrayList
+
++main(); void
+-fileReader(); ArrayList
+-outputSort(); void
+}
+
+@enduml

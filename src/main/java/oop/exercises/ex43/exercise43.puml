@@ -1,27 +1,25 @@
 @startuml
-'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+class solution43
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+class solution43 {
+-siteName; String
+-authorName;String
+-javaScriptFiles;String
+-ccsFiles;String
+-currentPath; String
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
++main(); void
+-nameStringInputs(); void
+-filesGenerator(); void
 
-class ArrayList {
-Object[] elementData
-size()
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class websiteGenerator{
++newWebsite; File
+
++generateWebsiteOutput(); void
+
 }
 
 @enduml

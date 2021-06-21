@@ -1,21 +1,17 @@
 @startuml
-'https://plantuml.com/class-diagram
 
 class solution41
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
 
 class solution41 {
 
++namesList; Array List
++names; File
++count; int
+
++main(); void
+-listNames(); ArrayList
+-sortNames(); void
 
 }
+
 @enduml
