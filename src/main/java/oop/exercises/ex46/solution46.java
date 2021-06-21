@@ -41,6 +41,7 @@ public class solution46 {
 
             // use nested loop to count word frequency
             for (String wordReader : wordArray) {
+                // keep count of occurrences using "count"
                 if (InputMap.containsKey(wordReader)) {
                     count = InputMap.get(wordReader);
                     InputMap.put(wordReader, count + 1);
@@ -49,9 +50,10 @@ public class solution46 {
                 }
             }
         }
-        // use a loop to output from the
+        // use a loop to output from the HashMap
         for (Map.Entry<String, Integer> word : InputMap.entrySet()) {
             System.out.print(word.getKey() + " : ");
+            // loop to print "*" character
             for(int i = 0; i < word.getValue(); i++){
                 System.out.print("*");
             }
