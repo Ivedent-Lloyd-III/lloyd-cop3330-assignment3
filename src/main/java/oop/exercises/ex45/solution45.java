@@ -25,8 +25,8 @@ public class solution45 {
     private static void readFile() throws IOException {
 
         // initialize the file and scanner
-        File file = new File("C:\\Users\\ivede\\Desktop\\OOP Exercises\\exercise45_input.txt");
-        Scanner sc = new Scanner(file);
+        File inputFile = new File("C:\\Users\\ivede\\Desktop\\OOP Exercises\\exercise45_input.txt");
+        Scanner sc = new Scanner(inputFile);
         // initialize the file writer
         FileWriter writer = new FileWriter("C:\\Users\\ivede\\Desktop\\OOP Exercises\\exercise45_output.txt");
 
